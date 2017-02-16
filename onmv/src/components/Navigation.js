@@ -5,6 +5,10 @@ const Navigation = () => {
   return (
     <nav>
       <p> Navigation </p>
+      <Link to="/"> HOME </Link>
+      <Link to="/topics"> TOPICS </Link>
+      <Link to="/types"> TYPES </Link>
+      <Link to="/dashboard"> Dashboard </Link>
     </nav>
   );
 };
