@@ -7,8 +7,16 @@ import Home from './components/Home';
 import Types from './components/Types';
 import Topics from './components/Topics';
 import UserDashboard from './components/UserDashboard';
+import data from '../townhall_data.js'
 
 class App extends Component {
+  constructor() {
+    super();
+		this.state = {
+      data: data
+    }
+  }
+      
   render() {
     return (
       <BrowserRouter>
