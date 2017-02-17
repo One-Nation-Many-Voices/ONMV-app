@@ -1,0 +1,38 @@
+.home-card {
+  width: 70vw;
+  height: auto;
+  background-color: #F1F1F2;
+  margin: 30px auto;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 10px;
+}
+
+.home-card h3 {
+  font-size: 16px;
+  color: #BA3233;
+  font-weight: bold;
+  padding: 5px;
+
+}
+
+.home-card h5, p {
+  font-size: 14px;
+  color: #090E0F;
+  padding: 5px;
+}
+
+.home-card p {
+  margin-bottom: 10px;
+}
+.home-card label {
+  height: 30px;
+  width: 30px;
+  background-color: #495867;
+  color: #F1F1F2;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 5px;
+  margin: 5px;
+}
