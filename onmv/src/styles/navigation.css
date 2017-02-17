@@ -3,17 +3,15 @@ nav {
   width: 100vw;
   background-color: #F1F1F2;
   padding: 30px;
-
 }
 
 #navigation-container {
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#home-nav, #topics-nav, #types-nav, #dashboard-nav {
+#home-nav, #browse-nav, #dashboard-nav {
   width: 30px;
   height: 30px;
   padding: 10px;
