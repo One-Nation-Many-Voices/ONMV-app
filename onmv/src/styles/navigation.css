@@ -13,9 +13,9 @@ nav {
   justify-content: center;
 }
 
-#home-nav, #browse-nav, #dashboard-nav {
+#home-nav, #browse-nav, #dashboard-nav, #location-nav {
   width: 30px;
   height: 30px;
-  padding: 10px;
+  padding: 10px 16px;
   margin: 18px;
 }

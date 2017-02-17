@@ -8,6 +8,7 @@ import Types from './components/Types';
 import Topics from './components/Topics';
 import UserDashboard from './components/UserDashboard';
 import Browse from './components/Browse';
+import Location from './components/Location';
 
 class App extends Component {
   render() {
@@ -23,6 +24,8 @@ class App extends Component {
             <Match exactly pattern="/browse/types" component={Types}/>
 
             <Match exactly pattern="/browse/topics" component={Topics}/>
+
+          <Match exactly pattern="/location" component={Location}/>
 
           <Match exactly pattern="/dashboard" component={UserDashboard}/>
 
