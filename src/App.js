@@ -12,7 +12,7 @@ import data from '../townhall_data.js'
 class App extends Component {
   constructor() {
     super();
-		this.state = {
+    this.state = {
       data: data
     }
   }
