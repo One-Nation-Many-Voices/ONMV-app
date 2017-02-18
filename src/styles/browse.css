@@ -1,0 +1,23 @@
+.browse-nav {
+  width: 70vw;
+  height: 25vh;
+  background-color: #F1F1F2;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.browse-nav h3 {
+  font-size: 26px;
+  text-decoration: none;
+  color: #BA3233;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
