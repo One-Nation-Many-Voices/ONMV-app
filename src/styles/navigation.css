@@ -3,8 +3,9 @@ nav {
   width: 100vw;
   background-color: #F1F1F2;
   padding: 40px;
-  position : absolute;
+  position : fixed;
   bottom : 0;
+  margin-top: 100px;
 }
 
 #navigation-container {

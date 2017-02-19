@@ -6,8 +6,8 @@ class Browse extends Component {
   render(){
     return (
       <section >
-        <BrowseButton navlink={'types'}/>
-        <BrowseButton navlink={'topics'}/>
+        <BrowseButton navlink={'types'} name={'Types'}/>
+        <BrowseButton navlink={'topics'} name={'Topics'}/>
       </section>
     );
   }
