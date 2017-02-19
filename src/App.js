@@ -9,7 +9,7 @@ import Topics from './components/Topics';
 import UserDashboard from './components/UserDashboard';
 import Browse from './components/Browse';
 import Location from './components/Location';
-import data from '../townhall_data.js'
+import data from '../townhall_data.js';
 
 class App extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class App extends Component {
       data: data
     }
   }
-      
+
   render() {
     return (
       <BrowserRouter>

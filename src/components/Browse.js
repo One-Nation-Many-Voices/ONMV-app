@@ -1,24 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router';
+import BrowseButton from './BrowseButton';
 
-const Browse = () => {
-  return (
-    <section >
-
-      <article className='browse-nav'>
-        <Link  to='/browse/types'>
-          <h3> Browse Events by Type </h3>
-         </Link>
-      </article>
-
-      <article className='browse-nav'>
-        <Link to="/browse/topics">
-        <h3> Browse Events by Topic </h3>
-        </Link>
-      </article>
-
-    </section>
-  );
-};
+class Browse extends Component {
+  render(){
+    return (
+      <section >
+        <BrowseButton navlink={'types'}/>
+        <BrowseButton navlink={'topics'}/>
+      </section>
+    );
+  }
+}
 
 module.exports = Browse;
