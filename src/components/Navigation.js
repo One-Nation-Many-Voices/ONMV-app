@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Navigation = () => {
   return (
-    <nav>
+    <nav id='navigation-container'>
       <Link id='home-nav' to='/'>
         <img src="./icons/home-icon.svg"/>
        </Link>
