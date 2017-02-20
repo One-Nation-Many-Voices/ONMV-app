@@ -8,24 +8,24 @@ class Location extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      selected: options[0]
+      location: options[0]
     }
-    this.onSelect = this.onSelect.bind(this)
+    this.setLocation = this.setLocation.bind(this)
   }
 
-  onSelect (option) {
-    this.setState({selected: option})
+  setLocation (option) {
+    this.setState({location: option})
   }
 
   render () {
-    const defaultOption = this.state.selected
+    const defaultOption = this.state.location
 
     return (
       <section>
         <h4>Customize Your Event Results by Setting a Location </h4>
-        <Dropdown options={options} onChange={this.onSelect} value={defaultOption} placeholder="Select an option" />
+        <Dropdown options={options} onChange={this.setLocation} value={defaultOption} placeholder="Select an option" />
         <div className='result'>
-          You selected <span className="result-value">{this.state.selected.value}</span>
+          You selected <span className="result-value">{this.state.location.value}</span>
         </div>
       </section>
     )
