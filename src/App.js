@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss, Link } from 'react-router';
+import { BrowserRouter, Match } from 'react-router';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -23,7 +22,7 @@ class App extends Component {
   componentWillMount() {
     this.getEventData()
   }
-  
+
   getEventData() {
     $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
     function(data) {
@@ -33,9 +32,24 @@ class App extends Component {
     }.bind(this));
   }
 
+  setLocation (option) {
+    this.setState({location: option}, () => {
+      let location = this.state.location.value;
+      this.filterEventByLocation('AZ')
+    }
+  )}
+
+  filterEventByLocation (value) {
+    console.log(value);
+    let data = this.state.data
+    let filteredData = data.filter((event) => {
+      return event.state == value
+    })
+    this.setState({data:filteredData})
+  }
 
   render() {
-    const { data } = this.state
+    const { data, location } = this.state
     return (
       <BrowserRouter>
         <section>
@@ -51,7 +65,9 @@ class App extends Component {
 
             <Match exactly pattern="/browse/topics" component={Topics}/>
 
-          <Match exactly pattern="/location" component={Location}/>
+          <Match exactly pattern="/location" render={ () => (
+            <Location location={location} setLocation={this.setLocation.bind(this)}/>
+          )}/>
 
           <Match exactly pattern="/dashboard" component={UserDashboard}/>
 
