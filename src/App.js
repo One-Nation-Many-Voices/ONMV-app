@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss, Link } from 'react-router';
+import { BrowserRouter, Match } from 'react-router';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -34,17 +33,19 @@ class App extends Component {
   }
 
   setLocation (option) {
-    this.setState({location: option})
-    this.filterEventByLocation(this.state.location.value)
-  }
+    this.setState({location: option}, () => {
+      let location = this.state.location.value;
+      this.filterEventByLocation('AZ')
+    }
+  )}
 
   filterEventByLocation (value) {
+    console.log(value);
     let data = this.state.data
     let filteredData = data.filter((event) => {
-      return event.state === value
+      return event.state == value
     })
     this.setState({data:filteredData})
-
   }
 
   render() {
