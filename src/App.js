@@ -18,15 +18,15 @@ class App extends Component {
   }
   
   componentDidMount() {
-    this.getEventData()
+    // this.getEventData()
   }
   
-  getEventData() {
-    $.get( "https://onmv-backend.herokuapp.com/api/v1/events/" )
-    .done(function( data ) {
-      console.log( "Data Loaded: " + data );
-    });
-  };
+  // getEventData() {
+  //   $.get( "https://onmv-backend.herokuapp.com/api/v1/events/" )
+  //   .done(function( data ) {
+  //     console.log( "Data Loaded: " + data );
+  //   });
+  // };
 
   render() {
     return (
