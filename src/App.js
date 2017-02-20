@@ -10,14 +10,23 @@ import UserDashboard from './components/UserDashboard';
 import Browse from './components/Browse';
 import Location from './components/Location';
 import data from '../townhall_data.js';
+import $ from 'jquery';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      data: data
-    }
   }
+  
+  componentDidMount() {
+    this.getEventData()
+  }
+  
+  getEventData() {
+    $.get( "https://onmv-backend.herokuapp.com/api/v1/events/" )
+    .done(function( data ) {
+      console.log( "Data Loaded: " + data );
+    });
+  };
 
   render() {
     return (
