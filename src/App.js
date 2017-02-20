@@ -23,7 +23,7 @@ class App extends Component {
   componentWillMount() {
     this.getEventData()
   }
-  
+
   getEventData() {
     $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
     function(data) {
@@ -33,9 +33,13 @@ class App extends Component {
     }.bind(this));
   }
 
+  setLocation (option) {
+    console.log(option);
+    this.setState({location: option})
+  }
 
   render() {
-    const { data } = this.state
+    const { data, location } = this.state
     return (
       <BrowserRouter>
         <section>
@@ -51,7 +55,9 @@ class App extends Component {
 
             <Match exactly pattern="/browse/topics" component={Topics}/>
 
-          <Match exactly pattern="/location" component={Location}/>
+          <Match exactly pattern="/location" render={ () => (
+            <Location location={location} setLocation={this.setLocation.bind(this)}/>
+          )}/>
 
           <Match exactly pattern="/dashboard" component={UserDashboard}/>
 
