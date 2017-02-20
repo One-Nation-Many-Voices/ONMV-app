@@ -7,8 +7,17 @@ class Home extends Component {
     return (
       <section>
         {data.map(d => 
-          <EventCard id={d.id} name={d.name} date={d.date} time={d.time} desc={d.description} city={d.city} state={d.city} location={d.location} />
-          
+          <EventCard
+            key={d.id}
+            id={d.id}
+            name={d.name}
+            date={d.date}
+            time={d.time}
+            desc={d.description}
+            city={d.city}
+            state={d.state}
+            location={d.location}
+          />
         )}
       </section>
     );

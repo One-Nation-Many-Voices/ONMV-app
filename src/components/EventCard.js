@@ -12,7 +12,7 @@ class EventCard extends Component {
           <span> {time} </span>
         </h5>
         <h5>
-          <span> {location}, </span>
+          <span> {location} </span><br/>
           <span> {city}, {state} </span>
         </h5>
         <p> {desc} </p>
