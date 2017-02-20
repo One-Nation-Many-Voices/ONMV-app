@@ -33,15 +33,18 @@ class App extends Component {
     }.bind(this));
   }
 
-  setLocation (option, label) {
+  setLocation (option) {
     this.setState({location: option})
-    this.filterEventByLocation(label)
+    this.filterEventByLocation(this.state.location.value)
   }
 
-  filterEventByLocation (label) {
-    this.state.data.filter(function (data){
-      return data.state = label
+  filterEventByLocation (value) {
+    let data = this.state.data
+    let filteredData = data.filter((event) => {
+      return event.state === value
     })
+    this.setState({data:filteredData})
+
   }
 
   render() {
