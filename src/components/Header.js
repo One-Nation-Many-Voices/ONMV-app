@@ -3,6 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
+    <Link id='home-nav' to='/'>
      <h1>
        <span id='name-first'>
          ONE NATION
@@ -11,6 +12,7 @@ const Header = () => {
          MANY VOICES
        </span>
      </h1>
+     </Link>
    </header>
   );
 };
