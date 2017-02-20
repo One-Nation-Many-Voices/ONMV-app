@@ -9,23 +9,41 @@ import Topics from './components/Topics';
 import UserDashboard from './components/UserDashboard';
 import Browse from './components/Browse';
 import Location from './components/Location';
-import data from '../townhall_data.js';
+import $ from 'jquery';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: data
+      data: [],
+      location: ''
     }
   }
 
+  componentWillMount() {
+    this.getEventData()
+  }
+  
+  getEventData() {
+    $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
+    function(data) {
+      this.setState({
+        data: data,
+      });
+    }.bind(this));
+  }
+
+
   render() {
+    const { data } = this.state
     return (
       <BrowserRouter>
         <section>
           <Header/>
 
-          <Match exactly pattern="/" component={Home}/>
+          <Match exactly pattern="/" render={ () => (
+            <Home data={data}/>
+          )} />
 
           <Match exactly pattern='/browse' component={Browse}/>
 
