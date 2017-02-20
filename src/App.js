@@ -15,18 +15,24 @@ import $ from 'jquery';
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      data: []
+    }
   }
-  
-  componentDidMount() {
-    // this.getEventData()
+
+  componentWillMount() {
+    this.getEventData()
   }
-  
-  // getEventData() {
-  //   $.get( "https://onmv-backend.herokuapp.com/api/v1/events/" )
-  //   .done(function( data ) {
-  //     console.log( "Data Loaded: " + data );
-  //   });
-  // };
+
+  getEventData() {
+    $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
+    function(data) {
+      this.setState({
+        data: data,
+      });
+    }.bind(this));
+  }
+
 
   render() {
     return (
