@@ -16,9 +16,6 @@ class EventCard extends Component {
           <span> {city}, {state} </span>
         </h5>
         <p> {desc} </p>
-        <label>
-          WR
-        </label>
       </article>
     );
   };

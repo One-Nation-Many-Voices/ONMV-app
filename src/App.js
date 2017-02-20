@@ -33,9 +33,15 @@ class App extends Component {
     }.bind(this));
   }
 
-  setLocation (option) {
-    console.log(option);
+  setLocation (option, label) {
     this.setState({location: option})
+    this.filterEventByLocation(label)
+  }
+
+  filterEventByLocation (label) {
+    this.state.data.filter(function (data){
+      return data.state = label
+    })
   }
 
   render() {

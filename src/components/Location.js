@@ -4,12 +4,6 @@ import options from '../../states.js'
 
 class Location extends Component {
 
-  //
-  // setLocation (option) {
-  //   console.log(option);
-  //   this.setState({location: option})
-  // }
-
   render () {
     const { location, setLocation } = this.props
     return (
