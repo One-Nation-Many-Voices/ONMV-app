@@ -63,8 +63,12 @@ class App extends Component {
 
             <Match exactly pattern="/browse/types" component={Types}/>
 
+              <Match exactly pattern='/browse/types/:id' />
+
             <Match exactly pattern="/browse/topics" component={Topics}/>
 
+              <Match exactly pattern='/browse/topics/:id' />
+              
           <Match exactly pattern="/location" render={ () => (
             <Location location={location} setLocation={this.setLocation.bind(this)}/>
           )}/>
