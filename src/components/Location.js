@@ -11,7 +11,7 @@ class Location extends Component {
         <h4>Customize Your Event Results by Setting a Location </h4>
         <Dropdown options={options} onChange={setLocation.bind(this)} value={location} placeholder="Select an option" />
         <div className='result'>
-          You selected <span className="result-value">{location.value}</span>
+          You selected <span className="result-value">{location.label}</span>
         </div>
       </section>
     )
