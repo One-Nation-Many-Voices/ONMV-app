@@ -4,9 +4,7 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Types from './components/Types';
-import Topics from './components/Topics';
 import UserDashboard from './components/UserDashboard';
-import Browse from './components/Browse';
 import Location from './components/Location';
 import TypeResults from './components/TypeResults';
 import $ from 'jquery';
@@ -25,7 +23,6 @@ class App extends Component {
     this.getEventData()
   }
   
-
   getEventData() {
     $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
     function(data) {
@@ -36,7 +33,6 @@ class App extends Component {
     }.bind(this));
   }
   
-
   setLocation (option) {
     this.setState({location: option}, () => {
       let location = this.state.location.value;
@@ -60,27 +56,21 @@ class App extends Component {
 
           <Header/>
 
-          <Match exactly pattern="/" render={ () => (
+          <Match exactly pattern='/' render={ () => (
             <Home data={data} filteredData={filteredData}/>
           )} />
 
-          <Match exactly pattern='/browse' component={Browse}/>
+          <Match exactly pattern='/types' component={Types}/>
 
-            <Match exactly pattern="/browse/types" component={Types}/>
+            <Match exactly pattern='/types/:navID' render={ () => (
+              <TypeResults data={data} filteredData={filteredData} />
+            )} />
 
-              <Match exactly pattern='/browse/types/:navID' render={ () => (
-                <TypeResults data={data} filteredData={filteredData} />
-              )} />
-
-            <Match exactly pattern="/browse/topics" component={Topics}/>
-
-              <Match exactly pattern='/browse/topics/:navID' />
-
-          <Match exactly pattern="/location" render={ () => (
+          <Match exactly pattern='/location' render={ () => (
             <Location location={location} setLocation={this.setLocation.bind(this)}/>
           )}/>
 
-          <Match exactly pattern="/dashboard" component={UserDashboard}/>
+          <Match exactly pattern='/dashboard' component={UserDashboard}/>
 
           <Navigation />
 
