@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss, Link } from 'react-router';
+import { BrowserRouter, Match } from 'react-router';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -9,6 +8,7 @@ import Topics from './components/Topics';
 import UserDashboard from './components/UserDashboard';
 import Browse from './components/Browse';
 import Location from './components/Location';
+import TypeResults from './components/TypeResults';
 import $ from 'jquery';
 
 class App extends Component {
@@ -33,15 +33,19 @@ class App extends Component {
     }.bind(this));
   }
 
-  setLocation (option, label) {
-    this.setState({location: option})
-    this.filterEventByLocation(label)
-  }
+  setLocation (option) {
+    this.setState({location: option}, () => {
+      let location = this.state.location.value;
+      this.filterEventByLocation('AZ')
+    }
+  )}
 
-  filterEventByLocation (label) {
-    this.state.data.filter(function (data){
-      return data.state = label
+  filterEventByLocation (value) {
+    let data = this.state.data
+    let filteredData = data.filter((event) => {
+      return event.state == value
     })
+    this.setState({data:filteredData})
   }
 
   render() {
@@ -49,6 +53,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <section>
+
           <Header/>
 
           <Match exactly pattern="/" render={ () => (
@@ -59,7 +64,13 @@ class App extends Component {
 
             <Match exactly pattern="/browse/types" component={Types}/>
 
+              <Match exactly pattern='/browse/types/:navID' render={ () => (
+                <TypeResults data={data} />
+              )} />
+
             <Match exactly pattern="/browse/topics" component={Topics}/>
+
+              <Match exactly pattern='/browse/topics/:navID' />
 
           <Match exactly pattern="/location" render={ () => (
             <Location location={location} setLocation={this.setLocation.bind(this)}/>
@@ -68,6 +79,7 @@ class App extends Component {
           <Match exactly pattern="/dashboard" component={UserDashboard}/>
 
           <Navigation />
+
         </section>
       </BrowserRouter>
     );
