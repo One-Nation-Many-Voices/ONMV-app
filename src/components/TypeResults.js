@@ -21,7 +21,7 @@ class TypeResults extends Component {
     let filteredType = data.filter((event) => {
       return event.event_type === type
     })
-    this.setState({typeData:filteredType})
+    this.setState({typeData: filteredType})
   }
   
   render(){
