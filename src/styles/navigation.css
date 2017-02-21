@@ -1,5 +1,5 @@
 nav {
-  height: 20%;
+  height: 18%;
   width: 100vw;
   background-color: #F1F1F2;
   padding: 40px;
@@ -12,6 +12,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: solid 3px #507DBC;
 }
 
 #home-nav, #browse-nav, #dashboard-nav, #location-nav {
