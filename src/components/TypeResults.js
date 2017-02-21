@@ -10,13 +10,15 @@ class TypeResults extends Component {
   }
   
   componentWillMount() {
+    this.filterByType()
+  }
+  
+  filterByType() {
     let path = window.location.pathname
     let type = path.substr(path.lastIndexOf('/') + 1).replace("%20", " ")
-    console.log(type)
     let data = this.props.data
     
     let filteredType = data.filter((event) => {
-    
       return event.event_type === type
     })
     this.setState({typeData:filteredType})
