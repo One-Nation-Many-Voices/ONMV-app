@@ -24,7 +24,7 @@ class App extends Component {
   }
   
   getEventData() {
-    $.get( "https://onmv-backend.herokuapp.com/api/v1/events/",
+    $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
     function(data) {
       this.setState({
         data: data,
