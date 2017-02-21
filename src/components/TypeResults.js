@@ -16,7 +16,7 @@ class TypeResults extends Component {
   filterByType() {
     let path = window.location.pathname
     let type = path.substr(path.lastIndexOf('/') + 1).replace("%20", " ")
-    let data = this.props.data
+    let data = this.props.filteredData
     
     let filteredType = data.filter((event) => {
       return event.event_type === type

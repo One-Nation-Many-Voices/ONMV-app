@@ -16,6 +16,7 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      filteredData: [],
       location: ''
     }
   }
@@ -29,6 +30,7 @@ class App extends Component {
     function(data) {
       this.setState({
         data: data,
+        filteredData: this.state.data
       });
     }.bind(this));
   }
@@ -36,20 +38,20 @@ class App extends Component {
   setLocation (option) {
     this.setState({location: option}, () => {
       let location = this.state.location.value;
-      this.filterEventByLocation('AZ')
+      this.filterEventByLocation(location)
     }
   )}
 
   filterEventByLocation (value) {
-    let data = this.state.data
-    let filteredData = data.filter((event) => {
-      return event.state == value
+    let array = this.state.data
+    let filteredData = array.filter((event) => {
+      return event.state === value
     })
-    this.setState({data:filteredData})
+    this.setState({filteredData:filteredData})
   }
 
   render() {
-    const { data, location } = this.state
+    const { data, location, filteredData } = this.state
     return (
       <BrowserRouter>
         <section>
@@ -57,7 +59,7 @@ class App extends Component {
           <Header/>
 
           <Match exactly pattern="/" render={ () => (
-            <Home data={data}/>
+            <Home data={data} filteredData={filteredData}/>
           )} />
 
           <Match exactly pattern='/browse' component={Browse}/>
@@ -65,7 +67,7 @@ class App extends Component {
             <Match exactly pattern="/browse/types" component={Types}/>
 
               <Match exactly pattern='/browse/types/:navID' render={ () => (
-                <TypeResults data={data} />
+                <TypeResults data={data} filteredData={filteredData} />
               )} />
 
             <Match exactly pattern="/browse/topics" component={Topics}/>
