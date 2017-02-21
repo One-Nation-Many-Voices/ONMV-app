@@ -8,7 +8,7 @@ const Navigation = () => {
         <img src="./icons/home-icon.svg" alt='home icon'/>
        </Link>
 
-      <Link id="browse-nav" to="/browse">
+      <Link id="browse-nav" to="/types">
         <img src="./icons/grid-icon.svg" alt='grid icon'/>
       </Link>
 

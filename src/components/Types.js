@@ -5,7 +5,7 @@ class Types extends Component {
   render(){
     return (
       <section >
-        <TypesButton navlink={'all'} name={'All'}/>
+        <TypesButton navlink={'All'} name={'All'}/>
         <TypesButton navlink={'Town Hall'} name={'Townhalls'}/>
         <TypesButton navlink={'Coffee'} name={'Coffee'}/>
         <TypesButton navlink={'Office Hours'} name={'Office Hours'}/>
