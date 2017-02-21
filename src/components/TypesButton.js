@@ -5,7 +5,7 @@ class TypesButton extends Component {
   render() {
     return (
       <article className='types-nav'>
-        <Link  to={'/browse/types/' + this.props.navlink} >
+        <Link  to={'/browse/types/' + this.props.navlink} params={{ navID: this.props.navlink}}>
           <h3> {this.props.name} </h3>
          </Link>
       </article>
