@@ -4,6 +4,7 @@ import EventCard from './EventCard';
 class Home extends Component {
   render () {
     let data = this.props.filteredData
+    
     return (
       <section>
         {data.map(d => 

@@ -24,16 +24,18 @@ class App extends Component {
   componentWillMount() {
     this.getEventData()
   }
+  
 
   getEventData() {
     $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
     function(data) {
       this.setState({
         data: data,
-        filteredData: this.state.data
+        filteredData: data
       });
     }.bind(this));
   }
+  
 
   setLocation (option) {
     this.setState({location: option}, () => {
