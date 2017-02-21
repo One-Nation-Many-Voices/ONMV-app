@@ -8,6 +8,7 @@ import Topics from './components/Topics';
 import UserDashboard from './components/UserDashboard';
 import Browse from './components/Browse';
 import Location from './components/Location';
+import TypeResults from './components/TypeResults';
 import $ from 'jquery';
 
 class App extends Component {
@@ -53,6 +54,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <section>
+
           <Header/>
 
           <Match exactly pattern="/" render={ () => (
@@ -63,7 +65,11 @@ class App extends Component {
 
             <Match exactly pattern="/browse/types" component={Types}/>
 
+              <Match exactly pattern='/browse/types/:navID' component={TypeResults}/>
+
             <Match exactly pattern="/browse/topics" component={Topics}/>
+
+              <Match exactly pattern='/browse/topics/:navID' />
 
           <Match exactly pattern="/location" render={ () => (
             <Location location={location} setLocation={this.setLocation.bind(this)}/>
@@ -72,6 +78,7 @@ class App extends Component {
           <Match exactly pattern="/dashboard" component={UserDashboard}/>
 
           <Navigation />
+
         </section>
       </BrowserRouter>
     );

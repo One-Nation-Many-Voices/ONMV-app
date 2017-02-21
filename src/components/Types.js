@@ -4,7 +4,7 @@ import TypesButton from './TypesButton';
 class Types extends Component {
   render(){
     return (
-      <section>
+      <section >
         <TypesButton navlink={'all'} name={'All'}/>
         <TypesButton navlink={'townhalls'} name={'Townhalls'}/>
         <TypesButton navlink={'coffee'} name={'Coffee'}/>
