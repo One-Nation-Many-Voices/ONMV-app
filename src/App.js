@@ -41,7 +41,6 @@ class App extends Component {
   )}
 
   filterEventByLocation (value) {
-    console.log(value);
     let data = this.state.data
     let filteredData = data.filter((event) => {
       return event.state == value
@@ -65,7 +64,9 @@ class App extends Component {
 
             <Match exactly pattern="/browse/types" component={Types}/>
 
-              <Match exactly pattern='/browse/types/:navID' component={TypeResults}/>
+              <Match exactly pattern='/browse/types/:navID' render={ () => (
+                <TypeResults data={data} />
+              )} />
 
             <Match exactly pattern="/browse/topics" component={Topics}/>
 

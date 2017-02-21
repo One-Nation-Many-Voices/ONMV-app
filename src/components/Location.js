@@ -16,13 +16,11 @@ class Location extends Component {
           />
         <div className='result'>
           You selected
-            <span className="result-value">{location.label}</span>
+            <span className="result-value"> {location.label}</span>
         </div>
       </section>
     )
   }
 }
-
-
 
 module.exports = Location;
