@@ -1,0 +1,12 @@
+#dashboard-header {
+  text-align: center;
+  color: #507DBC;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#dashboard-header h2 {
+  padding: 10px;
+}
