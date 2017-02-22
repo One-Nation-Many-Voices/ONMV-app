@@ -4,7 +4,8 @@ import TypesButton from './TypesButton';
 class Types extends Component {
   render(){
     return (
-      <section >
+      <section id='types-page'>
+        <h2 className='sub-header'> BROWSE </h2>
         <TypesButton navlink={'All'} name={'All'}/>
         <TypesButton navlink={'Town Hall'} name={'Townhalls'}/>
         <TypesButton navlink={'Coffee'} name={'Coffee'}/>

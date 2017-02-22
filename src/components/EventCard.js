@@ -6,7 +6,7 @@ class EventCard extends Component {
     return (
       <article className='home-card'>
         <h3> {name} </h3>
-        <button> + </button>
+        <button className='add-event-btn'> + </button>
         <h5>
           <span> {date} </span>
           <span> {time} </span>
