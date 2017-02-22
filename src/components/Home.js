@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import EventCard from './EventCard';
+import displayMessageNoEvents from '../functions/displayMessageNoEvents';
 
 class Home extends Component {
   render () {
     let data = this.props.filteredData
 
+    let message = displayMessageNoEvents(data)
+
     return (
       <section id='home-page'>
         <h2 className='sub-header'> HOME </h2>
+        <h4 className='event-message'> {message} </h4>
         {data.map(d =>
           <EventCard
             key={d.id}

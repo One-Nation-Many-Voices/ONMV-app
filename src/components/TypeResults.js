@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import EventCard from './EventCard';
+import displayMessageNoEvents from '../functions/displayMessageNoEvents';
 
 class TypeResults extends Component {
   constructor() {
@@ -24,9 +25,13 @@ class TypeResults extends Component {
   }
 
   render(){
+
     let data = this.state.typeData
+    let message = displayMessageNoEvents(data)
+
     return (
       <section id='types-results-page'>
+        <h4 className='event-message'> {message} </h4>
         {data.map(d =>
           <EventCard
             key={d.id}
