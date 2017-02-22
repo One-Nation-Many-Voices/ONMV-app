@@ -71,7 +71,7 @@ class App extends Component {
           <Match exactly pattern='/types' component={Types}/>
 
             <Match exactly pattern='/types/:navID' render={ () => (
-              <TypeResults data={data} filteredData={filteredData} />
+              <TypeResults data={data} filteredData={filteredData} searchString={searchString}/>
             )} />
 
           <Match exactly pattern='/location' render={ () => (

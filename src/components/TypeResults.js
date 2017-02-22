@@ -24,22 +24,28 @@ class TypeResults extends Component {
   }
 
   render(){
-    let data = this.state.typeData
+    let { typeData } = this.state
+    let { searchString } = this.props
+    
+    let eventList = typeData.map((d) => {
+      return d.name.toLowerCase().includes(searchString.toLowerCase()) ?
+      (<EventCard
+        key={d.id}
+        id={d.id}
+        name={d.name}
+        date={d.date}
+        time={d.time}
+        desc={d.description}
+        city={d.city}
+        state={d.state}
+        location={d.location}
+      />) :
+      null
+    })
+    
     return (
       <section id='types-results-page'>
-        {data.map(d =>
-          <EventCard
-            key={d.id}
-            id={d.id}
-            name={d.name}
-            date={d.date}
-            time={d.time}
-            desc={d.description}
-            city={d.city}
-            state={d.state}
-            location={d.location}
-          />
-        )}
+        {eventList}
       </section>
     );
   }
