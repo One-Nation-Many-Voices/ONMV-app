@@ -21,6 +21,15 @@ class TypeResults extends Component {
     let path = window.location.pathname
     let type = path.substr(path.lastIndexOf('/') + 1).replace("%20", " ")
     let data = this.props.filteredData
+
+    type === "All" ? this.returnAll(data) : this.returnType(data, type)  
+  }
+  
+  returnAll(data) {
+    this.setState({typeData: data})
+  }
+  
+  returnType(data, type) {
     let filteredType = data.filter((event) => {
       return event.event_type === type
     })
