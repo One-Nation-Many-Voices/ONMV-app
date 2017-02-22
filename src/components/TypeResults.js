@@ -11,6 +11,7 @@ class TypeResults extends Component {
 
   componentWillMount() {
     this.filterByType()
+
   }
 
   filterByType() {
@@ -23,10 +24,13 @@ class TypeResults extends Component {
     this.setState({typeData: filteredType})
   }
 
+
+
   render(){
     let data = this.state.typeData
     return (
       <section id='types-results-page'>
+
         {data.map(d =>
           <EventCard
             key={d.id}
