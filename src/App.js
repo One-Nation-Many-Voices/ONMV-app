@@ -22,9 +22,9 @@ class App extends Component {
   componentWillMount() {
     this.getEventData()
   }
-  
+
   getEventData() {
-    $.get( "http://onmv-backend.herokuapp.com/api/v1/events/",
+    $.get( "https://onmv-backend.herokuapp.com/api/v1/events/",
     function(data) {
       this.setState({
         data: data,
@@ -32,7 +32,7 @@ class App extends Component {
       });
     }.bind(this));
   }
-  
+
   setLocation (option) {
     this.setState({location: option}, () => {
       let location = this.state.location.value;
