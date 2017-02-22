@@ -8,6 +8,7 @@ class Location extends Component {
     const { location, setLocation } = this.props
     return (
       <section>
+        <h2 className='sub-header'> SET LOCATION </h2>
         <h4>Customize Your Event Results by Setting a Location </h4>
         <Dropdown options={options}
           onChange={setLocation.bind(this)}

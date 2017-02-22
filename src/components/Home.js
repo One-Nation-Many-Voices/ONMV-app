@@ -4,10 +4,11 @@ import EventCard from './EventCard';
 class Home extends Component {
   render () {
     let data = this.props.filteredData
-    
+
     return (
-      <section>
-        {data.map(d => 
+      <section id='home-page'>
+        <h2 className='sub-header'> HOME </h2>
+        {data.map(d =>
           <EventCard
             key={d.id}
             id={d.id}
