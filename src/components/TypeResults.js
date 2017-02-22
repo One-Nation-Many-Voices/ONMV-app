@@ -8,27 +8,26 @@ class TypeResults extends Component {
       typeData: [],
     }
   }
-  
+
   componentWillMount() {
     this.filterByType()
   }
-  
+
   filterByType() {
     let path = window.location.pathname
     let type = path.substr(path.lastIndexOf('/') + 1).replace("%20", " ")
     let data = this.props.filteredData
-    
     let filteredType = data.filter((event) => {
       return event.event_type === type
     })
     this.setState({typeData: filteredType})
   }
-  
+
   render(){
     let data = this.state.typeData
     return (
-      <section>
-        {data.map(d => 
+      <section id='types-results-page'>
+        {data.map(d =>
           <EventCard
             key={d.id}
             id={d.id}
