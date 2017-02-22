@@ -6,8 +6,8 @@ export default class Search extends Component {
     const {onSearch} = this.props;
 
     return (
-      <div className = "search-bar">
-        <input id = "search-input"
+      <div className="search-bar">
+        <input id="search-input"
           placeholder="Search"
           onChange={(e) =>{onSearch(e.target.value)}}
         />

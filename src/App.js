@@ -7,7 +7,6 @@ import Types from './components/Types';
 import UserDashboard from './components/UserDashboard';
 import Location from './components/Location';
 import TypeResults from './components/TypeResults';
-import Search from './components/Search';
 import $ from 'jquery';
 
 class App extends Component {
@@ -17,7 +16,6 @@ class App extends Component {
       data: [],
       filteredData: [],
       location: '',
-      searchString: '',
     }
   }
 
@@ -50,10 +48,6 @@ class App extends Component {
     this.setState({filteredData:filteredData})
   }
   
-  updateSearch(searchString) {
-    this.setState({searchString: searchString});
-  }
-
   render() {
     const { data, location, filteredData, searchString } = this.state
     return (
@@ -62,10 +56,9 @@ class App extends Component {
 
           <Header/>
           
-          <Search onSearch={this.updateSearch.bind(this)}/>
 
           <Match exactly pattern='/' render={ () => (
-            <Home data={data} filteredData={filteredData} searchString={searchString}/>
+            <Home data={data} filteredData={filteredData} searchString={searchString} updateSearch={()=>this.updateSearch()}/>
           )} />
 
           <Match exactly pattern='/types' component={Types}/>

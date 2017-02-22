@@ -1,9 +1,22 @@
 import React, {Component} from 'react';
 import EventCard from './EventCard';
+import Search from './Search';
 
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      searchString: '',
+    }
+  }
+  
+  updateSearch(searchString) {
+    this.setState({searchString: searchString});
+  }
+  
   render () {
-    let { filteredData, searchString } = this.props
+    let { searchString } = this.state
+    let { filteredData } = this.props
     
     let eventList = filteredData.map((d) => {
       return d.name.toLowerCase().includes(searchString.toLowerCase()) ?
@@ -23,6 +36,7 @@ class Home extends Component {
     
     return (
       <section id='home-page'>
+        <Search onSearch={this.updateSearch.bind(this)}/>
         <h2 className='sub-header'> HOME </h2>
         {eventList}
       </section>

@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import EventCard from './EventCard';
+import Search from './Search';
 
 class TypeResults extends Component {
   constructor() {
     super();
     this.state = {
       typeData: [],
+      searchString: ''
     }
   }
 
@@ -22,10 +24,14 @@ class TypeResults extends Component {
     })
     this.setState({typeData: filteredType})
   }
+  
+  updateSearch(searchString) {
+    this.setState({searchString: searchString});
+  }
 
   render(){
-    let { typeData } = this.state
-    let { searchString } = this.props
+    let { typeData, searchString } = this.state
+
     
     let eventList = typeData.map((d) => {
       return d.name.toLowerCase().includes(searchString.toLowerCase()) ?
@@ -45,6 +51,7 @@ class TypeResults extends Component {
     
     return (
       <section id='types-results-page'>
+        <Search onSearch={this.updateSearch.bind(this)}/>
         {eventList}
       </section>
     );
