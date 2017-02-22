@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       data: [],
       filteredData: [],
-      location: ''
+      location: '',
     }
   }
 
@@ -47,23 +47,24 @@ class App extends Component {
     })
     this.setState({filteredData:filteredData})
   }
-
+  
   render() {
-    const { data, location, filteredData } = this.state
+    const { data, location, filteredData, searchString } = this.state
     return (
       <BrowserRouter>
         <section>
 
           <Header/>
+          
 
           <Match exactly pattern='/' render={ () => (
-            <Home data={data} filteredData={filteredData}/>
+            <Home data={data} filteredData={filteredData} searchString={searchString} updateSearch={()=>this.updateSearch()}/>
           )} />
 
           <Match exactly pattern='/types' component={Types}/>
 
             <Match exactly pattern='/types/:navID' render={ () => (
-              <TypeResults data={data} filteredData={filteredData} />
+              <TypeResults data={data} filteredData={filteredData} searchString={searchString}/>
             )} />
 
           <Match exactly pattern='/location' render={ () => (

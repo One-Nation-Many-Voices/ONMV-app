@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import EventCard from './EventCard';
+import Search from './Search';
 import displayMessageNoEvents from '../functions/displayMessageNoEvents';
+
 
 class TypeResults extends Component {
   constructor() {
     super();
     this.state = {
       typeData: [],
+      searchString: ''
     }
   }
 
@@ -23,28 +26,37 @@ class TypeResults extends Component {
     })
     this.setState({typeData: filteredType})
   }
+  
+  updateSearch(searchString) {
+    this.setState({searchString: searchString});
+  }
 
   render(){
+    let { typeData, searchString } = this.state
 
-    let data = this.state.typeData
-    let message = displayMessageNoEvents(data)
-
+    let eventList = typeData.map((d) => {
+      return d.name.toLowerCase().includes(searchString.toLowerCase()) ?
+      (<EventCard
+        key={d.id}
+        id={d.id}
+        name={d.name}
+        date={d.date}
+        time={d.time}
+        desc={d.description}
+        city={d.city}
+        state={d.state}
+        location={d.location}
+      />) :
+      null
+    })
+    
+    let message = displayMessageNoEvents(typeData)
+    
     return (
       <section id='types-results-page'>
+        <Search onSearch={this.updateSearch.bind(this)}/>
         <h4 className='event-message'> {message} </h4>
-        {data.map(d =>
-          <EventCard
-            key={d.id}
-            id={d.id}
-            name={d.name}
-            date={d.date}
-            time={d.time}
-            desc={d.description}
-            city={d.city}
-            state={d.state}
-            location={d.location}
-          />
-        )}
+        {eventList}
       </section>
     );
   }
