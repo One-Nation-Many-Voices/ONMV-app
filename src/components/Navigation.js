@@ -12,10 +12,10 @@ const Navigation = () => {
         <img src="./icons/grid-icon.svg" alt='grid icon'/>
       </Link>
 
-      <Link id="dashboard-nav" to="/types">
-      <img src="./icons/person-icon.svg" alt='person icon'/>
+      <Link id="search-nav" to="/types">
+      <img src="./icons/search-icon.svg" alt='search icon'/>
       </Link>
-      
+
       <Link id="location-nav" to="/location">
         <img src="./icons/location-icon.svg" alt='location icon'/>
       </Link>
