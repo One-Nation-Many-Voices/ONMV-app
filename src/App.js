@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Types from './components/Types';
-import UserDashboard from './components/UserDashboard';
+import AllEvents from './components/AllEvents';
 import Location from './components/Location';
 import TypeResults from './components/TypeResults';
 import $ from 'jquery';
@@ -47,7 +47,7 @@ class App extends Component {
     })
     this.setState({filteredData:filteredData})
   }
-  
+
   render() {
     const { data, location, filteredData, searchString } = this.state
     return (
@@ -55,10 +55,11 @@ class App extends Component {
         <section>
 
           <Header/>
-          
 
-          <Match exactly pattern='/' render={ () => (
-            <Home data={data} filteredData={filteredData} searchString={searchString} updateSearch={()=>this.updateSearch()}/>
+          <Match exactly pattern='/' component={Home}/>
+
+          <Match exactly pattern='/all' render={ () => (
+            <AllEvents data={data} filteredData={filteredData} searchString={searchString} updateSearch={()=>this.updateSearch()}/>
           )} />
 
           <Match exactly pattern='/types' component={Types}/>
@@ -70,8 +71,6 @@ class App extends Component {
           <Match exactly pattern='/location' render={ () => (
             <Location location={location} setLocation={this.setLocation.bind(this)}/>
           )}/>
-
-          <Match exactly pattern='/dashboard' component={UserDashboard}/>
 
           <Navigation />
 
