@@ -8,18 +8,17 @@ const Navigation = () => {
         <img src="./icons/home-icon.svg" alt='home icon'/>
        </Link>
 
-      <Link id="browse-nav" to="/all">
+      <Link id="all-nav" to="/all">
         <img src="./icons/grid-icon.svg" alt='grid icon'/>
       </Link>
 
-      <Link id="search-nav" to="/types">
+      <Link id="browse-nav" to="/types">
       <img src="./icons/search-icon.svg" alt='search icon'/>
       </Link>
 
       <Link id="location-nav" to="/location">
         <img src="./icons/location-icon.svg" alt='location icon'/>
       </Link>
-
 
     </nav>
   );
