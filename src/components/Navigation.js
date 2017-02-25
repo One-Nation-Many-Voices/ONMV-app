@@ -20,7 +20,6 @@ const Navigation = () => {
         <img src="./icons/location-icon.svg" alt='location icon'/>
       </Link>
 
-
     </nav>
   );
 };
