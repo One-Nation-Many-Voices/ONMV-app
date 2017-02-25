@@ -13,11 +13,11 @@ class Location extends Component {
         <Dropdown options={options}
           onChange={setLocation.bind(this)}
           value={location}
-          placeholder="Select an option"
+          placeholder='Select an option'
           />
         <div className='result'>
           You selected
-            <span className="result-value"> {location.label}</span>
+            <span className='result-value'> {location.label}</span>
         </div>
       </section>
     )
