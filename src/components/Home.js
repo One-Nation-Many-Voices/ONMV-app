@@ -2,23 +2,25 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <section>
+    <section id='home-page'>
 
       <h2 className='sub-header'> HOME </h2>
 
-      <article>
+      <article className='home-summary'>
         <p>
-        Welcome to One Nation Many Voices. This is an open source project
-        created to help people find events such as townhalls to make their voices
+        Welcome to <span id='name-first'>One Nation </span>
+        <span id='name-second'>Many Voices</span>.
+        This is an open source project
+        created to help people find political activism events such as townhalls to make their voices
         heard on topics that matter to them.
         </p>
         <p>
-        If you are interested in contributing to this project, visit the
-        Github Organization page.
+        If you are interested in contributing to this project, visit the project's
+        <a href='https://github.com/One-Nation-Many-Voices'> Github page. </a>
         </p>
       </article>
 
-      <article>
+      <article className='tips-section'>
         <h4 id='tips-header'> Tips for Participating in Events </h4>
           <h5 className='tips-subheader'> Prepare </h5>
           <ul>
@@ -40,8 +42,7 @@ const Home = () => {
             <li> Consider following up via phone, email, or another event </li>
           </ul>
 
-        <p> Suggestions summarized from
-          <a href='https://www.indivisibleguide.com/resources-2/2017/2/11/town-hall-tips-fact-sheet'>Indivisible</a>
+        <p className='tips-credit'> Suggestions summarized from <a href='https://www.indivisibleguide.com/resources-2/2017/2/11/town-hall-tips-fact-sheet'>Indivisible</a>
         </p>
 
       </article>

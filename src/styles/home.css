@@ -1,56 +1,44 @@
-#home-page, #types-page, #types-results-page {
-  margin-bottom: 200px;
-}
-.home-card {
-  width: 70vw;
-  height: auto;
-  background-color: #F1F1F2;
-  margin: 30px auto;
-  text-align: left;
+#home-page {
   font-family: 'Open Sans', sans-serif;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  padding: 20px;
-  position: relative;
 }
 
-.home-card h3 {
-  font-size: 16px;
-  color: #BA3233;
+#home-page a {
+  color: #507DBC;
+  font-style: italic;
+}
+.home-summary, .tips-section {
+  margin: 30px 50px;
+}
+
+.home-summary p {
+    font-size: 20px;
+}
+
+#tips-header {
+  color: #507DBC;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tips-subheader {
+  color: #507DBC;;
+  font-size: 18px;
   font-weight: bold;
   padding: 5px;
-
 }
 
-.home-card h5, p {
-  font-size: 14px;
-  color: #090E0F;
+li::before {
+  content: "•";
+  color: black
+}
+
+li, ul {
   padding: 5px;
 }
 
-.home-card p {
-  margin-bottom: 10px;
-}
-.home-card label {
-  height: 30px;
-  width: 30px;
-  background-color: #495867;
-  color: #F1F1F2;
-  border-radius: 50%;
-  font-size: 12px;
-  padding: 5px;
-  margin: 5px;
-}
-
-.add-event-btn {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  font-weight: bold;
-  background-color: #507DBC;
-  border: none;
-  color: #F1F1F2;
-  position: absolute;
-  right: 20px;
-  top: 20px;
+.tips-credit {
+  text-align: center;
+  padding: 16px 10px 10px;
+  font-size: 18px;
+  font-style: italic;
 }
