@@ -38,11 +38,11 @@ class AllEvents extends Component {
     let message = displayMessageNoEvents(filteredData)
 
     return (
-      <section id='home-page'>
+      <section id='all-page'>
         <Search onSearch={this.updateSearch.bind(this)}/>
         <h2 className='sub-header'> ALL EVENTS </h2>
         {eventList}
-        <h4 className='event-message'> {message} </h4>
+        <p className='event-message'> {message} </p>
       </section>
     );
   };

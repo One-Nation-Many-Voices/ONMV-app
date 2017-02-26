@@ -9,7 +9,7 @@ class Location extends Component {
     return (
       <section id='location-page'>
         <h2 className='sub-header'> SET LOCATION </h2>
-        <h4>Customize Your Event Results by Setting a Location </h4>
+        <h4 className='location-instructions'>Customize Your Event Results by Setting a Location </h4>
         <Dropdown options={options}
           onChange={setLocation.bind(this)}
           value={location}

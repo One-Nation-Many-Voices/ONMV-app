@@ -2,9 +2,9 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-h4 {
+.location-instructions {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 50px;
 }
 
 .result {
