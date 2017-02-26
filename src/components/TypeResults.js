@@ -44,7 +44,8 @@ class TypeResults extends Component {
     let { typeData, searchString } = this.state
 
     let eventList = typeData.map((d) => {
-      return d.name.toLowerCase().includes(searchString.toLowerCase()) ?
+      let results = d.id + d.name + d.date + d.time + d.description + d.city + d.state + d.location
+      return results.toLowerCase().includes(searchString.toLowerCase()) ?
       (<EventCard
         key={d.id}
         id={d.id}
