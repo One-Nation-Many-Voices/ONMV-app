@@ -1,4 +1,5 @@
 const options = [
+  {label: 'All', value: 'All'},
   {label: 'Alabama', value: 'AL' },
   {label: 'Alaska', value: 'AK' },
   {label: 'Arizona', value: 'AZ' },
