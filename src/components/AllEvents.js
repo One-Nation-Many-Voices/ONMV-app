@@ -20,7 +20,7 @@ class AllEvents extends Component {
     let { filteredData } = this.props
 
     let eventList = filteredData.map((d) => {
-      let results = d.id + d.name + d.date + d.time + d.description + d.city + d.state + d.location
+      let results = d.name + d.date + d.time + d.description + d.city + d.state + d.location
       return results.toLowerCase().includes(searchString.toLowerCase()) ?
       (<EventCard
         key={d.id}
