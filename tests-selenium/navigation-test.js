@@ -67,6 +67,5 @@ function navigateAllEventsTest(driver) {
     })
   });
 
-
   driver.quit();
 }
