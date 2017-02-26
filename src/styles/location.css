@@ -1,4 +1,6 @@
-
+#location-page {
+  font-family: 'Open Sans', sans-serif;
+}
 
 h4 {
   text-align: center;
@@ -6,6 +8,7 @@ h4 {
 }
 
 .result {
+  font-size: 20px;
   margin-top: 50px;
   padding: 8px 0;
   text-align: center;
@@ -13,6 +16,7 @@ h4 {
 
 .result-value {
   font-weight: bold;
+  color: #BA3233;
 }
 
 .Dropdown-root {
