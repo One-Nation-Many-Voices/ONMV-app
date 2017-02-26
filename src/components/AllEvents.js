@@ -39,8 +39,8 @@ class AllEvents extends Component {
 
     return (
       <section id='all-page'>
-        <Search onSearch={this.updateSearch.bind(this)}/>
         <h2 className='sub-header'> ALL EVENTS </h2>
+        <Search onSearch={this.updateSearch.bind(this)}/>
         {eventList}
         <p className='event-message'> {message} </p>
       </section>

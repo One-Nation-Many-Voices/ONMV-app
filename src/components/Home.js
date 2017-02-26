@@ -15,8 +15,8 @@ const Home = () => {
         heard on topics that matter to them.
         </p>
         <p>
-        If you are interested in contributing to this project, visit the project's
-        <a href='https://github.com/One-Nation-Many-Voices'> Github page. </a>
+        If you are interested in contributing to this project, visit the
+        <a href='https://github.com/One-Nation-Many-Voices' target='_blank'> Github page. </a>
         </p>
       </article>
 
@@ -42,7 +42,7 @@ const Home = () => {
             <li> Consider following up via phone, email, or another event </li>
           </ul>
 
-        <p className='tips-credit'> Suggestions summarized from <a href='https://www.indivisibleguide.com/resources-2/2017/2/11/town-hall-tips-fact-sheet'>Indivisible</a>
+        <p className='tips-credit'> Suggestions summarized from <a href='https://www.indivisibleguide.com/resources-2/2017/2/11/town-hall-tips-fact-sheet' target='_blank'>Indivisible</a>
         </p>
 
       </article>

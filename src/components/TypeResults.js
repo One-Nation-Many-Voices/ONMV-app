@@ -63,6 +63,7 @@ class TypeResults extends Component {
 
     return (
       <section id='types-results-page'>
+        <h2 className='sub-header'> EVENTS </h2>
         <Search onSearch={this.updateSearch.bind(this)}/>
         <p className='event-message'>
          {message}
