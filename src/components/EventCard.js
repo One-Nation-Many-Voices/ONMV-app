@@ -5,7 +5,7 @@ class EventCard extends Component {
     const {name, date, time, desc, city, state, location, directions} = this.props
     return (
       <article className='home-card'>
-        <h3> {name} </h3>
+        <h3 className='event-title'> {name} </h3>
         <h5>
           <span> {date} </span>
           <span> {time} </span>

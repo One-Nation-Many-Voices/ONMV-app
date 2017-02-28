@@ -7,8 +7,4 @@ describe('EventCard', () => {
     const wrapper = shallow(<EventCard />)
     expect(wrapper.type(), 'article')
   });
-
-  it('should recieve props', () => {
-    const wrapper = mount(<EventCard />)
-  });
 });
