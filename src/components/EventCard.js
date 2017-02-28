@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class EventCard extends Component {
   render() {
-    const {name, date, time, desc, city, state, location} = this.props
+    const {name, date, time, desc, city, state, location, directions} = this.props
     return (
       <article className='home-card'>
         <h3> {name} </h3>
@@ -13,6 +13,7 @@ class EventCard extends Component {
         <h5>
           <span> {location} </span><br/>
           <span> {city}, {state} </span>
+          <span> {directions} </span>
         </h5>
         <p> {desc} </p>
       </article>

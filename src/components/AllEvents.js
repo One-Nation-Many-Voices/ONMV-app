@@ -15,13 +15,23 @@ class AllEvents extends Component {
     this.setState({searchString: searchString});
   }
 
+  addDirections(data) {
+    if (data.location !== "" || data.location !== null) {
+      return (`<a className='directions' target='_blank' href='https://www.google.com/maps/place/+${data.location}+${data.city}+${data.state}'>Directions</a>`)
+    } else {
+      return null
+    };
+  };
+  
   render () {
     let { searchString } = this.state
     let { filteredData } = this.props
-
+    
     let eventList = filteredData.map((d) => {
+      this.addDirections(d)
       let results = d.name + d.date + d.time + d.description + d.city + d.state + d.location
       return results.toLowerCase().includes(searchString.toLowerCase()) ?
+
       (<EventCard
         key={d.id}
         id={d.id}
@@ -32,6 +42,7 @@ class AllEvents extends Component {
         city={d.city}
         state={d.state}
         location={d.location}
+        directions={this.addDirections(d)}
       />) :
       null
     })
