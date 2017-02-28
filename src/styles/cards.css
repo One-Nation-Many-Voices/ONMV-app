@@ -3,42 +3,47 @@
 }
 
 .home-card {
-  width: 70vw;
-  height: auto;
+  width: 400px;
+  height: 250px;
   background-color: #F1F1F2;
   margin: 30px auto;
   text-align: left;
   font-family: 'Open Sans', sans-serif;
+  border-bottom: 2px solid #d3d7df;
+  border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  padding: 20px;
   position: relative;
 }
 
-.home-card h3 {
-  font-size: 16px;
-  color: #BA3233;
+.event-title {
+  background-color: #BA3233;
+  color: #fff;
   font-weight: bold;
-  padding: 5px;
-
+  padding: 15px;
+  height: 30px;
+  font-size: 25px;
+  font-size: 22px;
+  border-radius: 14px 14px 0 0;
 }
 
-.home-card h5, p {
-  font-size: 14px;
-  color: #090E0F;
-  padding: 5px;
+.rep-info {
+  font-size: 18px;
+  margin: 10px 15px;
 }
 
-.home-card p {
-  margin-bottom: 10px;
+.rep-name {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.time-date, .address-location{
+  font-size: 16px;
+  margin: 0 0 0 10px;
 }
 
 .home-card label {
-  height: 30px;
-  width: 30px;
+
   background-color: #495867;
   color: #F1F1F2;
-  border-radius: 50%;
-  font-size: 12px;
-  padding: 5px;
-  margin: 5px;
+
 }

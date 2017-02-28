@@ -31,16 +31,19 @@ class AllEvents extends Component {
 
     let eventList = filteredData.map((d) => {
       this.addDirections(d)
-      let results = d.name + d.date + d.time + d.description + d.city + d.state + d.location
+      let results = d.event_type + d.rep_first_name + d.rep_last_name + d.district + d.date + d.time + d.street + d.city + d.state + d.location
       return results.toLowerCase().includes(searchString.toLowerCase()) ?
 
       (<EventCard
         key={d.id}
         id={d.id}
-        name={d.name}
+        eventType={d.event_type}
+        firstName={d.rep_first_name}
+        lastName={d.rep_last_name}
+        district = {d.district}
         date={d.date}
         time={d.time}
-        desc={d.description}
+        street={d.street}
         city={d.city}
         state={d.state}
         location={d.location}
@@ -55,7 +58,9 @@ class AllEvents extends Component {
       <section id='all-page'>
         <h2 className='sub-header'> ALL EVENTS </h2>
         <Search onSearch={this.updateSearch.bind(this)}/>
+        <section className='event-list'>
         {eventList}
+        </section>
         <p className='event-message'> {message} </p>
       </section>
     );

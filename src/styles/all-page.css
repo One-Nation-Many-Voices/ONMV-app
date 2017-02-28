@@ -19,3 +19,7 @@
   font-size: 20px;
   border: 2px solid #507DBC;
 }
+
+.event-list {
+  display: flex;
+}

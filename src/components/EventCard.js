@@ -2,20 +2,22 @@ import React, {Component} from 'react';
 
 class EventCard extends Component {
   render() {
-    const {name, date, time, desc, city, state, location, directions} = this.props
+    const {eventType, firstName, lastName, district, date, time, location, street, city, state, directions} = this.props
     return (
       <article className='home-card'>
-        <h3 className='event-title'> {name} </h3>
-        <h5>
-          <span> {date} </span>
+        <h3 className='event-title'> {eventType} </h3>
+        <h5 className='rep-info'> <span className='rep-name'>{firstName} {lastName} </span><br/>
+          {district}
+        </h5>
+        <p className='time-date'>
+          <span> {date} </span><br/>
           <span> {time} </span>
-        </h5>
-        <h5>
+        </p>
+        <p className='address-location'>
           <span> {location} </span><br/>
+          <span> {street} </span> <br/>
           <span> {city}, {state} </span>
-          <span> {directions} </span>
-        </h5>
-        <p> {desc} </p>
+        </p>
       </article>
     );
   };
