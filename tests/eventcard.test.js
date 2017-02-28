@@ -10,6 +10,5 @@ describe('EventCard', () => {
 
   xit('recieves props', () => {
     const wrapper = mount(<EventCard />)
-
   });
 });

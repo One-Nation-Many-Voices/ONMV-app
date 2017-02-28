@@ -1,6 +1,6 @@
 var webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until;
+  By = webdriver.By,
+  until = webdriver.until;
 
 var driver_chr = new webdriver.Builder()
     .forBrowser('chrome')
@@ -13,12 +13,12 @@ function navigateAllEventsTest(driver) {
 
   driver.findElement(By.id('all-nav')).click();
   driver.sleep(3000).then(function() {
-
     driver.findElement(By.className('sub-header')).then(function(h1) {
-      h1.getText().then(function(text){
+      h1.getText().then(function(text) {
         if(text === 'ALL EVENTS') {
           console.log('Navigate to All Events Test Passed');
-        } else {
+        }
+        else {
           console.log('Navigate to All Events Test Failed');
         }
       })
@@ -27,12 +27,12 @@ function navigateAllEventsTest(driver) {
 
   driver.findElement(By.id('browse-nav')).click();
   driver.sleep(3000).then(function() {
-
     driver.findElement(By.className('sub-header')).then(function(h1) {
-      h1.getText().then(function(text){
+      h1.getText().then(function(text) {
         if(text === 'BROWSE') {
           console.log('Navigate to Browse Events Test Passed');
-        } else {
+        }
+        else {
           console.log('Navigate to Browse Events Test Failed');
         }
       })
@@ -41,12 +41,12 @@ function navigateAllEventsTest(driver) {
 
   driver.findElement(By.id('location-nav')).click();
   driver.sleep(3000).then(function() {
-
     driver.findElement(By.className('sub-header')).then(function(h1) {
-      h1.getText().then(function(text){
+      h1.getText().then(function(text) {
         if(text === 'SET LOCATION') {
           console.log('Navigate to Set Location Test Passed');
-        } else {
+        }
+        else {
           console.log('Navigate to Set Location Test Failed');
         }
       })
@@ -55,12 +55,12 @@ function navigateAllEventsTest(driver) {
 
   driver.findElement(By.id('home-nav')).click();
   driver.sleep(3000).then(function() {
-
     driver.findElement(By.className('sub-header')).then(function(h1) {
-      h1.getText().then(function(text){
+      h1.getText().then(function(text) {
         if(text === 'HOME') {
           console.log('Navigate to Home Test Passed');
-        } else {
+        }
+        else {
           console.log('Navigate to Home Test Failed');
         }
       })

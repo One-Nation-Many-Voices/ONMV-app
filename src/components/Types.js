@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TypesButton from './TypesButton';
 
 class Types extends Component {
-  render(){
+  render() {
     return (
       <section id='types-page'>
 
@@ -14,7 +14,7 @@ class Types extends Component {
         <TypesButton navlink={'Office Hours'} name={'Office Hours'}/>
         <TypesButton navlink={'Ticketed Event'} name={'Ticketed Event'}/>
         <TypesButton navlink={'Other'} name={'Other'}/>
-        
+
       </section>
     );
   }

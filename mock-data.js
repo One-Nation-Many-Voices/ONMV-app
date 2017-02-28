@@ -1,4 +1,4 @@
-const data = [
+const MockData = [
 {
 id: 1,
 name: "Town Hall with Gary Palmer",

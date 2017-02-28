@@ -19,10 +19,10 @@ class TypeResults extends Component {
 
   filterByType() {
     let path = window.location.pathname
-    let type = path.substr(path.lastIndexOf('/') + 1).replace("%20", " ")
+    let type = path.substr(path.lastIndexOf('/') + 1).replace('%20', ' ')
     let data = this.props.filteredData
 
-    type === "All" ? this.returnAll(data) : this.returnType(data, type)
+    type === 'All' ? this.returnAll(data) : this.returnType(data, type)
   }
 
   returnAll(data) {
@@ -40,7 +40,7 @@ class TypeResults extends Component {
     this.setState({searchString: searchString});
   }
 
-  render(){
+  render() {
     let { typeData, searchString } = this.state
 
     let eventList = typeData.map((d) => {

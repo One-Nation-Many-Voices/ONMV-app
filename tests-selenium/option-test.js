@@ -6,26 +6,26 @@ var driver_chr = new webdriver.Builder()
     .forBrowser('chrome')
     .build();
 
-navigateEventTypeTest(driver_chr);
+selectStateOptionTest(driver_chr);
 
-function navigateEventTypeTest(driver) {
+function selectStateOptionTest(driver) {
   driver.get('http://localhost:3000/');
 
-  driver.findElement(By.id('browse-nav')).click();
+  driver.findElement(By.id('location-nav')).click();
   driver.sleep(3000).then(function() {
     driver.findElement(By.className('sub-header')).then(function(h1) {
       h1.getText().then(function(text) {
-        if(text === 'BROWSE') {
-          console.log('Navigate to Browse Events Test Passed');
+        if(text === 'SET LOCATION') {
+          console.log('Navigate to Set Location Test Passed');
         }
         else {
-          console.log('Navigate to Browse Events Test Failed');
+          console.log('Navigate to Set Location Test Failed');
         }
       })
     })
   });
 
-  driver.findElement(By.id('Townhalls')).click();
+  driver.findElement(By.id('dropdown')).click();
   driver.sleep(3000).then(function() {
     driver.findElement(By.tagName('h3')).then(function(h3) {
       h3.getText().then(function(text) {

@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": [2, "single"],
+    "eol-last": [0],
+    "no-mixed-requires": [0],
+    "no-underscore-dangle": [0],
+    "max-len": [2, 200, 4, {"ignoreUrls": true}],
+    "no-unused-vars": [0],
+    "indent": ["error", 2],
+  }
+}
