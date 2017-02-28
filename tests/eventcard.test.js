@@ -8,7 +8,7 @@ describe('EventCard', () => {
     expect(wrapper.type(), 'article')
   });
 
-  xit('recieves props', () => {
+  it('should recieve props', () => {
     const wrapper = mount(<EventCard />)
   });
 });
