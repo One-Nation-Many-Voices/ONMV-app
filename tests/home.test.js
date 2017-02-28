@@ -9,5 +9,4 @@ describe('Home', () => {
     const wrapper = shallow(<Home filteredData={data}/>)
     expect(wrapper.type(), 'section')
   });
-
 });

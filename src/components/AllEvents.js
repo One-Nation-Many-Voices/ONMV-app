@@ -16,20 +16,20 @@ class AllEvents extends Component {
   }
 
   addDirections(data) {
-    if (data.location !== "" || data.location !== null) {
+    if (data.location !== '' || data.location !== null) {
       let directionsURL = `https://www.google.com/maps/place/+${data.location}+${data.city}+${data.state}`
       return <a className='directions' target='_blank' href={directionsURL} >Directions</a>
-      } else {
+    }
+    else {
       return null
     };
   };
-  
+
   render () {
     let { searchString } = this.state
     let { filteredData } = this.props
-    
+
     let eventList = filteredData.map((d) => {
-      
       this.addDirections(d)
       let results = d.name + d.date + d.time + d.description + d.city + d.state + d.location
       return results.toLowerCase().includes(searchString.toLowerCase()) ?
