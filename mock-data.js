@@ -134,4 +134,4 @@ updated_at: "2017-02-18T21:08:30.884Z"
 }
 ]
 
-module.exports = data;
+module.exports = MockData;
