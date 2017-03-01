@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import EventCard from './EventCard';
 import Search from './Search';
 import displayMessageNoEvents from '../functions/displayMessageNoEvents';
@@ -21,9 +21,9 @@ class AllEvents extends Component {
     let { searchString } = this.state
     let { filteredData } = this.props
     let eventList = filteredData.map((d) => {
-    return filterSearch(d, searchString) ?
-    renderEventCard(d) :
-     null
+      return filterSearch(d, searchString) ?
+      renderEventCard(d) :
+      null
     })
 
     let message = displayMessageNoEvents(filteredData)
@@ -33,7 +33,7 @@ class AllEvents extends Component {
         <h2 className='sub-header'> ALL EVENTS </h2>
         <Search onSearch={this.updateSearch.bind(this)}/>
         <section className='event-list'>
-        {eventList}
+          {eventList}
         </section>
         <p className='event-message'> {message} </p>
       </section>

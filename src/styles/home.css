@@ -1,3 +1,19 @@
+li, ul {
+  padding: 5px;
+}
+
+li::before {
+  content: "•";
+  color: black
+}
+a {
+  text-decoration: none;
+}
+
+#home-page, #types-page, #types-results-page {
+  margin-bottom: 200px;
+}
+
 #home-page {
   font-family: 'Open Sans', sans-serif;
 }
@@ -25,15 +41,6 @@
   color: #507DBC;;
   font-size: 18px;
   font-weight: bold;
-  padding: 5px;
-}
-
-li::before {
-  content: "•";
-  color: black
-}
-
-li, ul {
   padding: 5px;
 }
 

@@ -12,7 +12,6 @@ class Types extends Component {
         <TypesButton navlink={'Office Hours'} name={'Office Hours'}/>
         <TypesButton navlink={'Ticketed Event'} name={'Ticketed Event'}/>
         <TypesButton navlink={'Other'} name={'Other'}/>
-
       </section>
     );
   }

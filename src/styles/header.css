@@ -1,12 +1,12 @@
 header {
-  height: 15%;
-  width: 100vw;
   background-color: #F1F1F2;
-  font-size: 30px;
+  border-bottom: solid 3px #507DBC;
   font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  height: 15%;
   padding: 20px 0;
   text-align: center;
-  border-bottom: solid 3px #507DBC;
+  width: 100vw;
 }
 
 #name-first {
@@ -18,10 +18,10 @@ header {
 }
 
 .sub-header {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
   color: #507DBC;
   font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
   margin: 20px;
+  text-align: center;
 }

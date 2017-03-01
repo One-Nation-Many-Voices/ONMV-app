@@ -1,29 +1,25 @@
-#home-page, #types-page, #types-results-page {
-  margin-bottom: 200px;
-}
-
 .home-card {
-  width: 375px;
-  height: 275px;
   background-color: #F1F1F2;
-  margin: 30px auto;
-  text-align: left;
-  font-family: 'Open Sans', sans-serif;
   border-bottom: 2px solid #d3d7df;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  font-family: 'Open Sans', sans-serif;
+  height: 275px;
+  margin: 30px auto;
   position: relative;
+  text-align: left;
+  width: 375px;
 }
 
 .event-title {
+  border-radius: 14px 14px 0 0;
   color: #fff;
   font-weight: bold;
-  padding: 15px;
-  height: 30px;
   font-size: 25px;
-  font-size: 22px;
-  border-radius: 14px 14px 0 0;
+  height: 30px;
+  padding: 15px;
 }
+
 .R h3{
   background-color: #BA3233;
 }
@@ -35,6 +31,7 @@
 .I h3 {
   background-color: #4F517D;
 }
+
 .rep-info {
   font-size: 18px;
   margin: 10px 15px 15px;
@@ -47,8 +44,8 @@
 
 .time-date, .address-location{
   font-size: 16px;
-  margin: 0 0 0 10px;
   line-height: 1.2;
+  margin: 0 0 0 10px;
 }
 
 .home-card label {
@@ -63,6 +60,7 @@
 .address-details, .date-details {
   display: inline-block;
 }
+
 .address-icon {
   background-image: url('../icons/checkin2.svg');
   background-repeat: no-repeat;
@@ -76,15 +74,15 @@
 }
 
  .address-icon, .calendar-icon {
-   width: 30px;
-   height: 30px;
    display: inline-block;
-   vertical-align: top;
+   height: 30px;
    padding: 2px 10px;
+   vertical-align: top;
+   width: 30px;
  }
 
  .address-location-name, .date-name {
-   width: 250px;
    overflow-wrap: normal;
    overflow-wrap: break-word;
+   width: 250px;
  }
