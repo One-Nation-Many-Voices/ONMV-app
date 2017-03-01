@@ -5,7 +5,7 @@ class TypesButton extends Component {
   render() {
     return (
       <article className='types-nav' id={this.props.name}>
-        <Link  to={'/types/' + this.props.navlink}>
+        <Link  to={'/ONMV-frontend/types/' + this.props.navlink}>
           <h3> {this.props.name} </h3>
          </Link>
       </article>
