@@ -1,8 +1,22 @@
 import React, {Component} from 'react';
 
 class EventCard extends Component {
+  getDirections(location, state, city) {
+    if (location !== '' || location !== null) {
+      let directionsURL = `https://www.google.com/maps/place/+${location}+${city}+${state}`
+      return <a className='directions' target='_blank' href={directionsURL}>
+              <img  className='address-icon' src='./icons/checkin2.svg' alt='location icon'/>
+            </a>
+    }
+    else {
+      return null
+    };
+  };
+
   render() {
-    const {party, eventType, firstName, lastName, district, date, time, location, street, city, state, directions} = this.props
+    const {party, eventType, firstName, lastName, district, date, time, location, street, city, state} = this.props
+    let directions = this.getDirections(location, state, city)
+
     return (
       <section className='home-card'>
         <span className={party}>
@@ -24,7 +38,7 @@ class EventCard extends Component {
         </article>
 
         <article className='address-location'>
-          <img  className='address-icon' src='./icons/checkin2.svg' alt='location icon'/>
+          {directions}
           <article className='address-details'>
             <div className='address-location-name'> {location} </div>
             <span> {street} </span> <br/>
