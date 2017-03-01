@@ -2,7 +2,7 @@
   "name": "onmv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://One-Nation-Many-Voices.github.io/",
+  "homepage": "https://One-Nation-Many-Voices.github.io/ONMV-frontend/",
   "devDependencies": {
     "chai": "^3.5.0",
     "enzyme": "^2.7.1",
