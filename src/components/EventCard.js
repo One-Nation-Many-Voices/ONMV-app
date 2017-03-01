@@ -16,7 +16,8 @@ class EventCard extends Component {
         </h5>
 
         <article className='time-date'>
-          <img  className='calendar-icon' src='./icons/calendar-icon.svg' alt='calendar icon'/>
+          <div  className='calendar-icon'>
+          </div>
           <article className='date-details'>
             <div className='date-name'> {date} </div>
             <span> {time} </span>
@@ -24,7 +25,8 @@ class EventCard extends Component {
         </article>
 
         <article className='address-location'>
-          <img  className='address-icon' src='./icons/checkin2.svg' alt='location icon'/>
+          <div  className='address-icon'>
+          </div>
           <article className='address-details'>
             <div className='address-location-name'> {location} </div>
             <span> {street} </span> <br/>
