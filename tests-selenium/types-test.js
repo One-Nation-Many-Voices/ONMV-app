@@ -39,19 +39,5 @@ function navigateEventTypeTest(driver) {
     })
   });
 
-  driver.findElement(By.id('browse-nav')).click();
-  driver.sleep(3000).then(function() {
-    driver.findElement(By.className('sub-header')).then(function(h1) {
-      h1.getText().then(function(text) {
-        if(text === 'BROWSE') {
-          console.log('Navigate to Browse Events Test Passed');
-        }
-        else {
-          console.log('Navigate to Browse Events Test Failed');
-        }
-      })
-    })
-  });
-
   driver.quit();
 }
