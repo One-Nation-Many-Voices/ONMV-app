@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 class EventCard extends Component {
+
   getDirections(location, state, city) {
     if (location !== '' || location !== null) {
       let directionsURL = `https://www.google.com/maps/place/+${location}+${city}+${state}`
@@ -14,11 +15,11 @@ class EventCard extends Component {
   };
 
   render() {
-    const {party, eventType, firstName, lastName, district, date, time, location, street, city, state} = this.props
+    const {id, party, eventType, firstName, lastName, district, date, time, location, street, city, state} = this.props
     let directions = this.getDirections(location, state, city)
 
     return (
-      <section className='home-card'>
+      <section className='home-card' id={id}>
         <span className={party}>
 
         <h3 className='event-title'> {eventType} </h3>

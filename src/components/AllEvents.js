@@ -38,7 +38,6 @@ class AllEvents extends Component {
         city={d.city}
         state={d.state}
         location={d.location}
-
       />) :
       null
     })

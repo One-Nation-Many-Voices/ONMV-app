@@ -14,5 +14,4 @@ describe('Types', () => {
     const wrapper = mount(<MemoryRouter><Types/></MemoryRouter>);
     assert.equal(wrapper.find('.types-nav').length, 6);
   });
-
 });
