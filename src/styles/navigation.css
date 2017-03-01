@@ -15,7 +15,7 @@ nav {
   justify-content: center;
 }
 
-#home-nav, #all-nav, #browse-nav, #location-nav {
+.home-nav, #all-nav, #browse-nav, #location-nav {
   height: 30px;
   margin: 18px;
   padding: 10px 16px;

@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Navigation = () => {
   return (
     <nav id='navigation-container'>
-      <Link id='home-nav' to='/ONMV-frontend/'>
+      <Link className='home-nav' to='/ONMV-frontend/'>
         <img src="./icons/home-icon.svg" alt='home icon'/>
        </Link>
 
