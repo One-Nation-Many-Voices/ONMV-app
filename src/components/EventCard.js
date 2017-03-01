@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import getDirections from '../functions/getDirections';
+import Calendar from './Calendar'
 
 class EventCard extends Component {
+    
   render() {
     const {party, eventType, firstName, lastName, district, date, time, location, street, city, state} = this.props
     let directions = getDirections(location, state, city)
@@ -16,8 +18,9 @@ class EventCard extends Component {
           {district}
         </h5>
         <article className='time-date'>
-          <div  className='calendar-icon'>
-          </div>
+          {/* <div  className='calendar-icon'>
+          </div> */}
+          <Calendar date={date} time={time} location={location} eventType={eventType} firstName={firstName} lastName={lastName}/>
           <article className='date-details'>
             <div className='date-name'> {date} </div>
             <span> {time} </span>
