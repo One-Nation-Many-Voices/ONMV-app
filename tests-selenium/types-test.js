@@ -29,7 +29,7 @@ function navigateEventTypeTest(driver) {
   driver.sleep(3000).then(function() {
     driver.findElement(By.tagName('h3')).then(function(h3) {
       h3.getText().then(function(text) {
-        if(text === 'Town Hall with Gary Palmer') {
+        if(text === 'Town Hall') {
           console.log('Display Events with Type Selected Test Passed');
         }
         else {
