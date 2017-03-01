@@ -6,8 +6,8 @@ const Home = () => {
       <h2 className='sub-header'> HOME </h2>
       <article className='home-summary'>
         <p>
-        Welcome to <span id='name-first'>One Nation </span>
-        <span id='name-second'>Many Voices</span>.
+        Welcome to <span className='name-first'>One Nation </span>
+        <span className='name-second'>Many Voices</span>.
         This is an open source project
         created to help people find political activism events such as townhalls to make their voices
         heard on topics that matter to them.
