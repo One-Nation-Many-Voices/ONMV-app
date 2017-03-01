@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import getDirections from '../functions/getDirections';
 
 class EventCard extends Component {
   render() {
-    const {party, eventType, firstName, lastName, district, date, time, location, street, city, state, directions} = this.props
+    const {party, eventType, firstName, lastName, district, date, time, location, street, city, state} = this.props
+    let directions = getDirections(location, state, city)
+
     return (
       <section className='home-card'>
         <span className={party}>
@@ -25,8 +28,7 @@ class EventCard extends Component {
         </article>
 
         <article className='address-location'>
-          <div  className='address-icon'>
-          </div>
+            {directions}
           <article className='address-details'>
             <div className='address-location-name'> {location} </div>
             <span> {street} </span> <br/>
