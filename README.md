@@ -11,20 +11,18 @@ with Mocha, Chai, and Selenium.
 
 ## Installation and Setup Instructions
 
-Clone down this repository. You will need `node` and `npm` installed globally on
+Clone down this repository. You will need `npm` installed globally on
 your machine.
 
 Installation: `npm install`
 
-To start server: `node server.js`
-
 To start Application: `npm start`
-
-
 
 To visit Application: `localhost:3000`
 
 To run tests: `npm test`
+
+[Deployed Site](https://one-nation-many-voices.github.io/ONMV-frontend/)
 
 ## Screenshots
 
