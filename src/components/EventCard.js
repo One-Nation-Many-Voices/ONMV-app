@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import getDirections from '../functions/getDirections';
 
 class EventCard extends Component {
@@ -9,15 +9,12 @@ class EventCard extends Component {
     return (
       <section className='home-card'>
         <span className={party}>
-
         <h3 className='event-title'> {eventType} </h3>
         </span>
-
         <h5 className='rep-info'>
           <span className='rep-name'>{firstName} {lastName} </span><br/>
           {district}
         </h5>
-
         <article className='time-date'>
           <div  className='calendar-icon'>
           </div>
@@ -26,7 +23,6 @@ class EventCard extends Component {
             <span> {time} </span>
           </article>
         </article>
-
         <article className='address-location'>
             {directions}
           <article className='address-details'>
@@ -35,7 +31,6 @@ class EventCard extends Component {
             <span> {city}, {state} </span>
           </article>
         </article>
-
       </section>
     );
   };

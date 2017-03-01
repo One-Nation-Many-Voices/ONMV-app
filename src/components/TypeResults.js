@@ -59,7 +59,7 @@ class TypeResults extends Component {
          {message}
         </p>
         <section className='event-list'>
-        {eventList}
+          {eventList}
         </section>
       </section>
     );

@@ -2,11 +2,16 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .event-message {
   font-family: 'Open Sans', sans-serif;
-  text-align: center;
   font-size: 18px;
   margin: 20px 50px;
+  text-align: center;
 }
 
 .search-bar {
@@ -15,13 +20,8 @@
 }
 
 #search-input {
-  width: 200px;
-  font-size: 20px;
   border: 2px solid #507DBC;
+  font-size: 20px;
   padding: 10px;
-}
-
-.event-list {
-  display: flex;
-  flex-wrap: wrap;
+  width: 200px;
 }
