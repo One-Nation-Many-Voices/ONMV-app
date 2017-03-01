@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   getEventData() {
-    $.get( "https://onmv-backend.herokuapp.com/api/v1/events/",
+    $.get( 'https://onmv-backend.herokuapp.com/api/v1/events/',
     function(data) {
       this.setState({
         data: data,
@@ -39,7 +39,8 @@ class App extends Component {
       location === 'All' ? this.setState({filteredData: this.state.data}) :
       this.filterEventByLocation(location)
     }
-  )}
+  )
+  }
 
   filterEventByLocation (value) {
     let array = this.state.data
@@ -57,19 +58,19 @@ class App extends Component {
 
           <Header/>
 
-          <Match exactly pattern='/' component={Home}/>
+          <Match exactly pattern='/ONMV-frontend/' component={Home}/>
 
-          <Match exactly pattern='/all' render={ () => (
+          <Match exactly pattern='/ONMV-frontend/all' render={ () => (
             <AllEvents data={data} filteredData={filteredData} searchString={searchString} updateSearch={()=>this.updateSearch()}/>
           )} />
 
-          <Match exactly pattern='/types' component={Types}/>
+          <Match exactly pattern='/ONMV-frontend/types' component={Types}/>
 
-            <Match exactly pattern='/types/:navID' render={ () => (
+            <Match exactly pattern='/ONMV-frontend/types/:navID' render={ () => (
               <TypeResults data={data} filteredData={filteredData} searchString={searchString}/>
             )} />
 
-          <Match exactly pattern='/location' render={ () => (
+          <Match exactly pattern='/ONMV-frontend/location' render={ () => (
             <Location location={location} setLocation={this.setLocation.bind(this)}/>
           )}/>
 
