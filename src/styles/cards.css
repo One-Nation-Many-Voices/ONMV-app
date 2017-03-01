@@ -63,6 +63,17 @@
 .address-details, .date-details {
   display: inline-block;
 }
+.address-icon {
+  background-image: url('../icons/checkin2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.calendar-icon {
+  background-image: url('../icons/calendar-icon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
  .address-icon, .calendar-icon {
    width: 30px;
