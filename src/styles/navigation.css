@@ -1,7 +1,7 @@
 nav {
+  background-color: #F1F1F2;
   height: 18%;
   width: 100vw;
-  background-color: #F1F1F2;
   padding: 40px;
   position : fixed;
   bottom : 0;
@@ -9,16 +9,15 @@ nav {
 }
 
 #navigation-container {
-  display: flex;
   align-items: center;
-  justify-content: center;
   border-top: solid 3px #507DBC;
-
+  display: flex;
+  justify-content: center;
 }
 
 #home-nav, #all-nav, #browse-nav, #location-nav {
-  width: 30px;
   height: 30px;
-  padding: 10px 16px;
   margin: 18px;
+  padding: 10px 16px;
+  width: 30px;
 }

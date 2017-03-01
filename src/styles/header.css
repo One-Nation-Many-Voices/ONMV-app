@@ -1,13 +1,22 @@
 header {
-  height: 15%;
-  width: 100vw;
   background-color: #F1F1F2;
+  border-bottom: solid 3px #507DBC;
   font-size: 30px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
+  height: 15%;
   padding: 20px 0;
   text-align: center;
-  border-bottom: solid 3px #507DBC;
+  width: 100vw;
+}
+
+.sub-header {
+  color: #507DBC;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
 }
 
 #name-first {
@@ -16,13 +25,4 @@ header {
 
 #name-second {
   color: #BA3233;
-}
-
-.sub-header {
-  text-align: center;
-  font-size: 26px;
-  font-weight: bold;
-  color: #507DBC;
-  font-family: 'Open Sans', sans-serif;
-  margin: 20px;
 }

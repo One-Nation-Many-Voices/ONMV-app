@@ -29,11 +29,25 @@ function navigateEventTypeTest(driver) {
   driver.sleep(3000).then(function() {
     driver.findElement(By.tagName('h3')).then(function(h3) {
       h3.getText().then(function(text) {
-        if(text === 'Town Hall with Gary Palmer') {
+        if(text === 'Town Hall') {
           console.log('Display Events with Type Selected Test Passed');
         }
         else {
           console.log('Display Events with Type Selected Test Failed');
+        }
+      })
+    })
+  });
+
+  driver.findElement(By.id('browse-nav')).click();
+  driver.sleep(3000).then(function() {
+    driver.findElement(By.className('sub-header')).then(function(h1) {
+      h1.getText().then(function(text) {
+        if(text === 'BROWSE') {
+          console.log('Navigate to Browse Events Test Passed');
+        }
+        else {
+          console.log('Navigate to Browse Events Test Failed');
         }
       })
     })
