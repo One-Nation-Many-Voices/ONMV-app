@@ -3,10 +3,9 @@
 ###Description
 
 Welcome to the codebase for the web application of One Nation Many Voices. This application
-enables users to search upcoming political events and save events they would like
-to attend.
+enables users to search for upcoming political events.
 
-The application is built with HTML, CSS, React.JS, and Node.JS. Testing is done
+The application is built with HTML, CSS, and React.JS. Testing is done
 with Mocha, Chai, and Selenium.
 
 ## Installation and Setup Instructions
