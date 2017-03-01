@@ -53,19 +53,5 @@ function navigateAllEventsTest(driver) {
     })
   });
 
-  driver.findElement(By.id('home-nav')).click();
-  driver.sleep(3000).then(function() {
-    driver.findElement(By.className('sub-header')).then(function(h1) {
-      h1.getText().then(function(text) {
-        if(text === 'HOME') {
-          console.log('Navigate to Home Test Passed');
-        }
-        else {
-          console.log('Navigate to Home Test Failed');
-        }
-      })
-    })
-  });
-
   driver.quit();
 }
