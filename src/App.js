@@ -38,8 +38,7 @@ class App extends Component {
       let location = this.state.location.value;
       location === 'All' ? this.setState({filteredData: this.state.data}) :
       this.filterEventByLocation(location)
-    }
-  )
+    })
   }
 
   filterEventByLocation (value) {

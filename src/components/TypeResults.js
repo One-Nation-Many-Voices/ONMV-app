@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import EventCard from './EventCard';
 import Search from './Search';
 import displayMessageNoEvents from '../functions/displayMessageNoEvents';
-
+import filterSearch from '../functions/filterSearch';
+import renderEventCard from '../functions/renderEventCard';
 
 class TypeResults extends Component {
   constructor() {
@@ -42,25 +43,9 @@ class TypeResults extends Component {
 
   render() {
     let { typeData, searchString } = this.state
-
     let eventList = typeData.map((d) => {
-      let results = d.event_type + d.political_party + d.rep_first_name + d.rep_last_name + d.district + d.date + d.time + d.street + d.city + d.state + d.location
-      return results.toLowerCase().includes(searchString.toLowerCase()) ?
-      (<EventCard
-        key={d.id}
-        id={d.id}
-        party={d.political_party}
-        eventType={d.event_type}
-        firstName={d.rep_first_name}
-        lastName={d.rep_last_name}
-        district = {d.district}
-        date={d.date}
-        time={d.time}
-        street={d.street}
-        city={d.city}
-        state={d.state}
-        location={d.location}
-      />) :
+      return filterSearch(d, searchString) ?
+      renderEventCard(d) :
       null
     })
 
