@@ -12,7 +12,7 @@ describe('Location', () => {
     expect(wrapper.type(), 'section')
   });
 
-  it('should call the set location function when the dropdown is changed', () =>{
+  xit('should call the set location function when the dropdown is changed', () =>{
     let setLocation = sinon.spy();
     const wrapper = mount(<Location setLocation={setLocation}/>);
     wrapper.find('#dropdown').simulate('change');

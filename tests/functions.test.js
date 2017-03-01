@@ -1,5 +1,7 @@
 import displayMessageNoEvents from '../src/functions/displayMessageNoEvents';
 import getDirections from '../src/functions/getDirections';
+import filterSearch from '../src/functions/filterSearch';
+import renderEventCard from '../src/functions/renderEventCard';
 import { assert, expect } from 'chai';
 import MockData from '../mock-data';
 import React from 'react';
@@ -30,4 +32,31 @@ describe('getDirections', function() {
     let directions = getDirections(location, state, city)
     expect(directions).to.eql(link)
   })
+})
+
+describe('filterSearch', function() {
+  let data = MockData[0]
+  
+  it('should create a string with all of the data', function() {
+    let result = filterSearch(data, 'town')
+    expect('result').to.be.a('string');
+  });
+    
+  it('should return the data if the search string is included', function() {
+    let result = filterSearch(data, 'Town Hall')
+    expect(result).to.eql(true);
+  });
+    
+  it('should return the data regardless of upper or lowercase search', function() {
+    let result = filterSearch(data, 'GARY')
+    expect(result).to.eql(true);
+    
+    result = filterSearch(data, 'gary')
+    expect(result).to.eql(true);
+  });
+    
+  it('should not return the data if the search string is not found in the data', function() {
+    let result = filterSearch(data, 'REALLYLONGWORDTHATDOESNTEXIST');
+    expect(result).to.eql(false);
+  });
 })
