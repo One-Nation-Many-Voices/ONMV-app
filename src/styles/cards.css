@@ -57,6 +57,12 @@
   margin-top: 10px;
 }
 
+.date-details {
+  position: relative;
+  left: 20px;
+  top: -20px;
+}
+
 .address-details, .date-details {
   display: inline-block;
 }
