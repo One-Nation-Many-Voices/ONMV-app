@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Search from '../src/components/Search';
-import { assert, expect } from 'chai';  
+import { assert, expect } from 'chai';
 const sinon = require('sinon');
 
 describe('Search', () => {

@@ -67,8 +67,20 @@
   background-size: contain;
 }
 
+.address-icon:hover {
+  background-image: url('../icons/checkin-hover.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .calendar-icon {
   background-image: url('../icons/calendar-icon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.calendar-icon:hover {
+  background-image: url('../icons/calendar-icon-hover.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
