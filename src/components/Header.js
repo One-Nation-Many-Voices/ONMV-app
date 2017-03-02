@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Header = () => {
   return (
     <header>
-      <Link className='home-nav' to='/'>
+      <Link className='home-nav' to='/ONMV-frontend/'>
         <h1>
          <span className='name-first'>
            ONE NATION
