@@ -21,10 +21,10 @@ class EventCard extends Component {
           {/* <div  className='calendar-icon'>
           </div> */}
           <Calendar date={date} time={time} location={location} eventType={eventType} firstName={firstName} lastName={lastName}/>
-          <article className='date-details'>
-            <div className='date-name'> {date} </div>
+          <div className='date-details'>
+          <div className='date-name'> {date} </div>
             <span> {time} </span>
-          </article>
+          </div>
         </article>
         <article className='address-location'>
             {directions}

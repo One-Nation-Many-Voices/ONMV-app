@@ -8,10 +8,12 @@
     background: transparent!important;
 }
 
+
 .atcb-link {
-    display: block;
+    display: inline-block;;
     outline: none!important;
     cursor: pointer;
+    color: transparent;
 }
 
 .atcb-link:focus~ul,
@@ -32,6 +34,7 @@
 .atcb-list,
 .atcb-item
 {
+    list-style: none;
     margin: 0;
     padding: 0;
     background: #fff;
@@ -46,7 +49,7 @@
 {
     text-decoration: none;
     outline: none;
-    display: block;
+    display: inline-block;
 }
 
 .atcb-item.hover,
@@ -59,71 +62,20 @@
 }
 
 
-/* Blue */
+/* Icon */
 
-.atc-style-blue .atcb-link,
-.atc-style-blue .atcb-link:hover,
-.atc-style-blue .atcb-link:active,
-.atc-style-blue .atcb-link:focus
+.atc-style-button-icon .atcb-link,
+.atc-style-button-icon .atcb-link:hover,
+.atc-style-button-icon .atcb-link:active,
+.atc-style-button-icon .atcb-link:focus
 {
-    margin: 0;
-    padding: 7px 25px;
-    color: #fff;
-    font-family: "Verdana";
-    font-size: 14px;
+    background-image: url('../icons/calendar-icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
     text-decoration: none;
     outline: none;
-    line-height: 20px;
-    vertical-align: middle;
-    background: rgb(66,129,244);
-    box-shadow: 0 0 40px rgba(0, 0, 0, .13) inset;
-    border-radius: 4px;
-    zoom: 1;
-}
-
-.atc-style-blue .atcb-list {
-    width: 170px;
-    border: 1px solid rgb(186,186,186);
-    border-radius: 2px;
-    box-shadow: 0 0 5px #AAA;
-}
-
-.atc-style-blue .atcb-list,
-.atc-style-blue .atcb-item
-{
-    background: #fff;
-    color: #000;
-}
-
-.atc-style-blue .atcb-item,
-.atc-style-blue .atcb-item-link
-{
-    line-height: 1.3em;
-    vertical-align: middle;
-    zoom: 1;
-}
-
-.atc-style-blue .atcb-item-link,
-.atc-style-blue .atcb-item-link:hover,
-.atc-style-blue .atcb-item-link:active,
-.atc-style-blue .atcb-item-link:focus
-{
-    color: #000;
-    font-family: "Verdana";
-    font-size: 14px;
-    text-decoration: none;
-    outline: none;
-    padding: 5px 15px;
-}
-
-.atc-style-blue .atcb-item-link:hover,
-.atc-style-blue .atcb-item-link:active,
-.atc-style-blue .atcb-item-link:focus
-{
-    color: #fff;
-}
-
-.atc-style-blue .atcb-item.hover,
-.atc-style-blue .atcb-item:hover {
-    background: rgb(66,129,244);
+    padding: 2px 2px;
+    height: 30px;
+    width: 30px;
+    
 }

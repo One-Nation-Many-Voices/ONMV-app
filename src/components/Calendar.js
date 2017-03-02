@@ -23,7 +23,7 @@ class Calendar extends Component {
     let eventTitle = eventType + ' with ' + firstName + ' ' + lastName
     return (
     
-    <span className="addtocalendar atc-style-blue">
+    <span className="addtocalendar atc-style-button-icon">
         <var className="atc_event">
             <var className="atc_date_start">{dateTime}</var>
             <var className="atc_date_end">{dateTime}</var>
