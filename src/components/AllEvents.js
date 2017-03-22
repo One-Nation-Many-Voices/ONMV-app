@@ -20,9 +20,9 @@ class AllEvents extends Component {
   render () {
     let { searchString } = this.state
     let { filteredData } = this.props
-    let eventList = filteredData.map((d) => {
-      return filterSearch(d, searchString) ?
-      renderEventCard(d) :
+    let eventList = filteredData.map((data) => {
+      return filterSearch(data, searchString) ?
+      renderEventCard(data) :
       null
     })
 

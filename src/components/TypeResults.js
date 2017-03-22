@@ -43,9 +43,9 @@ class TypeResults extends Component {
 
   render() {
     let { typeData, searchString } = this.state
-    let eventList = typeData.map((d) => {
-      return filterSearch(d, searchString) ?
-      renderEventCard(d) :
+    let eventList = typeData.map((data) => {
+      return filterSearch(data, searchString) ?
+      renderEventCard(data) :
       null
     })
 
