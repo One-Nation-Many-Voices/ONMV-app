@@ -1,6 +1,6 @@
-#One Nation Many Voices
+# One Nation Many Voices
 
-###Description
+### Description
 
 Welcome to the codebase for the web application of One Nation Many Voices. This application
 enables users to search for upcoming political events.
